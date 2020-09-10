@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #final{
+            font-size: 15px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>BẢNG ĐỔI TIỀN</h1>
+<table style="width: 500px;">
+    <tr>
+        <td><b>Amount</b></td>
+        <td><b>From currency</b></td>
+        <td><b>To currency</b></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="inputvalue"></td>
+        <td>
+            <select id="money1">
+                <option value="1">DOLA</option>
+                <option value="105">Yen</option>
+                <option value="23000">VND</option>
+            </select>
+        </td>
+        <td>
+            <select id="money2">
+                <option value="23000">VND</option>
+                <option value="105">YEN</option>
+                <option value="1">DOlA</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="money()">convert</button>
+        </td>
+    </tr>
+</table>
+<p id="final">result:</p>
+</body>
+<script>
+    function money() {
+        let x = document.getElementById("inputvalue").value;
+        let y = document.getElementById("money2").value;
+        let z = document.getElementById("money1").value;
+        let tien = x*y/z;
+        document.getElementById("final").innerHTML = "result:" + tien;
+    }
+</script>
+</html>
